@@ -66,7 +66,8 @@ public class SpringBatchConfig {
 
         lineTokenizer.setDelimiter(",");
         lineTokenizer.setStrict(false);
-        lineTokenizer.setNames(new String[]{"id", "first", "last", "gpa", "age"});
+        //lineTokenizer.setNames(new String[]{"id", "first", "last", "gpa", "age"});
+        lineTokenizer.setNames(new String[]{ "first", "last", "gpa", "age"});
 
         BeanWrapperFieldSetMapper<Student> fieldSetMapper = new BeanWrapperFieldSetMapper<>();
         fieldSetMapper.setTargetType(Student.class);

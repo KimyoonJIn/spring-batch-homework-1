@@ -13,16 +13,6 @@ import java.util.Map;
 
 @Component
 public class Processor implements ItemProcessor<Student, Student> {
-
-//    private static final Map<String, String> DEPT_NAMES =
-//            new HashMap<>();
-//
-//    public Processor() {
-//        DEPT_NAMES.put("001", "Technology");
-//        DEPT_NAMES.put("002", "Operations");
-//        DEPT_NAMES.put("003", "Accounts");
-//    }
-
     @Override
     public Student process(Student student) throws Exception {
         Integer age = student.getAge();

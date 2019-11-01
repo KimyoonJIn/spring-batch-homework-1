@@ -1,4 +1,5 @@
-id,first,last,gpa,age
-1,Peter,Smith,3.90,28
-2,Sam,Sigh,3.75,25
-3,Ryan,Bookes,3.80,30
+first,last,gpa,age
+Peter,Smith,3.90,28
+Sam,Sigh,3.75,25
+Ryan,Bookes,3.80,30
+Tuyen,Le,3.8,22

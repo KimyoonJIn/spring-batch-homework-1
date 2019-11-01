@@ -1,0 +1,10 @@
+mum/edu/springbatchhomework1/batch/DBWriter.class
+mum/edu/springbatchhomework1/config/SpringBatchConfig.class
+mum/edu/springbatchhomework1/repository/StudentRepository.class
+mum/edu/springbatchhomework1/controller/LoginController.class
+mum/edu/springbatchhomework1/controller/LoadController.class
+mum/edu/springbatchhomework1/SpringBatchHomework1Application.class
+mum/edu/springbatchhomework1/model/Student.class
+mum/edu/springbatchhomework1/controller/IndexController.class
+mum/edu/springbatchhomework1/config/SpringSecurityConfiguration.class
+mum/edu/springbatchhomework1/batch/Processor.class
