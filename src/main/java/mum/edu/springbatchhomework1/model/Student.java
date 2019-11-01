@@ -1,9 +1,9 @@
 package mum.edu.springbatchhomework1.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
 public class Student {
@@ -13,16 +13,19 @@ public class Student {
     private String first;
     private String last;
     private Double gpa;
+
+    @Transient
     private Integer age;
 
+    private LocalDate dob;
     public Student() {}
 
-    public Student(Integer id, String first, String last, Double gpa, Integer age) {
-        this.id = id;
+    public Student(String first, String last, Double gpa, Integer age, LocalDate dob) {
         this.first = first;
         this.last = last;
         this.gpa = gpa;
         this.age = age;
+        this.dob = dob;
     }
 
     public Integer getId() {
@@ -63,5 +66,25 @@ public class Student {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    public LocalDate getDob() {
+        return dob;
+    }
+
+    public void setDob(LocalDate dob) {
+        this.dob = dob;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", first='" + first + '\'' +
+                ", last='" + last + '\'' +
+                ", gpa=" + gpa +
+                ", age=" + age +
+                ", dob=" + dob +
+                '}';
     }
 }

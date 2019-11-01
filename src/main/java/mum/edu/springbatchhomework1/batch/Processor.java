@@ -5,6 +5,7 @@ import mum.edu.springbatchhomework1.model.Student;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDate;
 import java.time.Year;
 import java.util.Calendar;
 import java.util.Date;
@@ -17,7 +18,8 @@ public class Processor implements ItemProcessor<Student, Student> {
     public Student process(Student student) throws Exception {
         Integer age = student.getAge();
         Integer year = Year.now().getValue() - age;
-        student.setAge(year);
+        LocalDate dob = LocalDate.of(year,1,1);
+        student.setDob(dob);
         System.out.println(String.format("Converted from [%d] to [%d]", age, year));
         return student;
     }
