@@ -16,10 +16,14 @@ import org.springframework.batch.item.file.LineMapper;
 import org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper;
 import org.springframework.batch.item.file.mapping.DefaultLineMapper;
 import org.springframework.batch.item.file.transform.DelimitedLineTokenizer;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.io.FileSystemResource;
+import org.springframework.core.io.FileSystemResourceLoader;
 import org.springframework.core.io.Resource;
+import org.springframework.core.io.ResourceLoader;
 
 @Configuration
 @EnableBatchProcessing
@@ -49,7 +53,6 @@ public class SpringBatchConfig {
 
     @Bean
     public FlatFileItemReader<Student> itemReader(@Value("${input}") Resource resource) {
-
         FlatFileItemReader<Student> flatFileItemReader = new FlatFileItemReader<>();
         flatFileItemReader.setResource(resource);
         flatFileItemReader.setName("CSV-Reader");
