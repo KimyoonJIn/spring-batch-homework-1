@@ -1,5 +1,5 @@
 
-CREATE database IF NOT EXISTS eahomework1;
+-- CREATE database IF NOT EXISTS mysql-standalone;
 drop table  if exists authorities;
 drop table if exists users;
 
