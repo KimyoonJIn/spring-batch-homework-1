@@ -8,6 +8,8 @@ services:
       MYSQL_USER: sa
       MYSQL_PASSWORD: password
       MYSQL_ROOT_PASSWORD: root
+    ports:
+      - 33061:3306
   springapp:
     build: .
     ports:
